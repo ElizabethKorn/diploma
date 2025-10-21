@@ -1,0 +1,102 @@
+.reviews-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reviews-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  text-align: left;
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+  min-height: 200px;
+}
+
+.reviews-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination-dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.dot.active {
+  background: #504f4e;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: #ffa800;
+  transform: scale(1.1);
+}
+
+.reviews-grid {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 40px 0;
+  }
+
+  .reviews-title {
+    font-size: 28px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    min-height: 350px;
+  }
+
+  .reviews-pagination {
+    margin-top: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

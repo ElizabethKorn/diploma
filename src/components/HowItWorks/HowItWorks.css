@@ -1,0 +1,119 @@
+.how-it-works {
+  padding: 40px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.how-it-works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Заголовок слева сверху */
+.how-it-works-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+/* Кнопка справа сверху */
+.learn-more-top-btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 250px;
+  background: transparent;
+  color: white;
+  border: solid 1px white;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-more-top-btn:hover {
+  background: #e69500;
+}
+
+/* Контейнер для трех карточек */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  align-items: start;
+}
+
+.step-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.step-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.step-caption {
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 40px 0;
+  }
+
+  .how-it-works-overlay {
+    padding: 40px 0;
+  }
+
+  .how-it-works-title {
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .learn-more-top-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 200px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .step-card {
+    padding: 20px 15px;
+  }
+
+  .step-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-caption {
+    font-size: 16px;
+  }
+}
