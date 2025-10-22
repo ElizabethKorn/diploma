@@ -4,9 +4,9 @@ import { ru } from "date-fns/locale";
 import "react-datepicker/dist/react-datepicker.css";
 import "./SearchForm.css";
 
-import locationIcon from "../../assets/images/Vector.png";
+import locationIcon from "../../assets/images/location.png";
 import arrowIcon from "../../assets/images/arrow.png";
-import calendar from "../../assets/images/Group.png";
+import calendar from "../../assets/images/calendar.png";
 
 const SearchForm = () => {
   const [searchData, setSearchData] = useState({
@@ -49,6 +49,21 @@ const SearchForm = () => {
   const minDate = new Date();
   const maxDate = new Date();
   maxDate.setFullYear(maxDate.getFullYear() + 1);
+
+  // Кастомный компонент для отображения дня в календаре
+  const renderDayContents = (day, date) => {
+    const dayOfWeek = date.getDay(); // 0 - воскресенье, 1 - понедельник, и т.д.
+    const isSunday = dayOfWeek === 0;
+    
+    return (
+      <div style={{ 
+        fontWeight: isSunday ? 'bold' : 'normal',
+        color: isSunday ? '#000' : 'inherit'
+      }}>
+        {day}
+      </div>
+    );
+  };
 
   return (
     <form onSubmit={handleSubmit} className="search-form">
@@ -111,9 +126,10 @@ const SearchForm = () => {
                 placeholderText="Туда"
                 className="date-picker-input"
                 required
-                isClearable
                 clearButtonTitle="Очистить"
                 showPopperArrow={false}
+                renderDayContents={renderDayContents}
+                calendarClassName="custom-calendar"
               />
               <img src={calendar} alt="Calendar" className="input-icon" />
             </div>
@@ -127,9 +143,11 @@ const SearchForm = () => {
                 dateFormat="dd.MM.yyyy"
                 placeholderText="Обратно"
                 className="date-picker-input"
-                isClearable
                 clearButtonTitle="Очистить"
                 showPopperArrow={false}
+                renderDayContents={renderDayContents}
+                calendarClassName="custom-calendar"
+                required
               />
               <img src={calendar} alt="Calendar" className="input-icon" />
             </div>

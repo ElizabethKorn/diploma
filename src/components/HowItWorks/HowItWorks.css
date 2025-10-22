@@ -13,7 +13,6 @@
   position: relative;
 }
 
-/* Заголовок слева сверху */
 .how-it-works-title {
   font-size: 32px;
   font-weight: bold;
@@ -22,7 +21,6 @@
   margin: 0;
 }
 
-/* Кнопка справа сверху */
 .learn-more-top-btn {
   position: absolute;
   top: 0;
@@ -40,10 +38,17 @@
 }
 
 .learn-more-top-btn:hover {
-  background: #e69500;
+  background: #ffca62;
+  color: black;
+  border: none;
 }
 
-/* Контейнер для трех карточек */
+.learn-more-top-btn:active {
+  background: #ffffff;
+  color: black;
+  border: none;
+}
+
 .steps-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -72,7 +77,6 @@
   margin: 0;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .how-it-works {
     padding: 40px 0;

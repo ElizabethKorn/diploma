@@ -1,0 +1,251 @@
+.footer {
+  background: #2d2d2d;
+  color: white;
+  padding: 40px 0 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Стили для контактов с иконками */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.subscription-text {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.email-input {
+  padding: 10px;
+  width: 350px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.send-button {
+  background: transparent;
+  color: white;
+  border: solid 0.5px white;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.send-button:hover {
+  background: #ffca62;
+  border-color: #ffca62;
+  color: black;
+}
+
+/* Секция соцсетей */
+.social-section {
+  margin-top: 10px;
+}
+
+.social-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+/* Стили для смены иконок при наведении */
+.icon-default,
+.icon-hover {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-default {
+  opacity: 1;
+}
+
+.icon-hover {
+  opacity: 0;
+}
+
+.social-icon:hover .icon-default {
+  opacity: 0;
+}
+
+.social-icon:hover .icon-hover {
+  opacity: 1;
+}
+
+.social-icon:hover {
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.center-image img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .footer {
+    padding: 30px 0 0 0;
+  }
+
+  .subscription-form {
+    flex-direction: column;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+
+  .footer-bottom-container {
+    padding: 0 30px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 20px;
+    gap: 25px;
+  }
+
+  .footer-bottom-container {
+    padding: 0 20px;
+  }
+
+  .contact-item {
+    gap: 8px;
+  }
+
+  .contact-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
