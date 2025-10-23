@@ -1,0 +1,12 @@
+.home-page {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 0 15px;
+  }
+}

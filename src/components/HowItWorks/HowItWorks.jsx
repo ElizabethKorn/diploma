@@ -10,6 +10,7 @@ const HowItWorks = () => {
   return (
     <section
       className="how-it-works"
+      id="как-это-работает"
       style={{ backgroundImage: `url(${howItWorks})` }}
     >
       <div className="how-it-works-container">

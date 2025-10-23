@@ -1,8 +1,9 @@
+/* Стили для главной страницы*/
 .hero {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../../assets/images/Mask\ Group.png") center/cover no-repeat;
+    url("../../assets/images/Mask Group.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,5 +52,95 @@
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2rem;
+  }
+}
+
+/* Стили для страницы билетов */
+.hero-tickets {
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/tickets-bg.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-tickets .hero-overlay {
+  width: 100%;
+  padding-top: 150px;
+}
+
+.hero-tickets .hero-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.tickets-hero-content {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.route-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dates-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.date-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+/* Адаптивность для страницы билетов */
+@media (max-width: 768px) {
+  .hero-tickets {
+    min-height: 300px;
+  }
+
+  .hero-tickets .hero-overlay {
+    padding-top: 100px;
+  }
+
+  .route-title {
+    font-size: 2rem;
+  }
+
+  .dates-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-tickets {
+    min-height: 250px;
+  }
+
+  .route-title {
+    font-size: 1.7rem;
+  }
+
+  .dates-info {
+    font-size: 1rem;
+  }
+
+  .date-item {
+    padding: 8px 16px;
   }
 }

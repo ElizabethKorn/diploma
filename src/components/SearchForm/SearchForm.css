@@ -1,4 +1,3 @@
-/* Существующие стили остаются без изменений */
 .search-form {
   background: #292929cc;
   padding: 30px;
@@ -109,6 +108,46 @@
   text-align: right;
 }
 
+.autocomplete-container {
+  position: relative;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #f5f4f6;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.form-input {
+  position: relative;
+  z-index: 1;
+}
+
 .search-button {
   background-color: #ffa800;
   color: black;
@@ -132,19 +171,16 @@
   color: #ffa800;
 }
 
-/* НОВЫЕ СТИЛИ ДЛЯ КАСТОМНОГО КАЛЕНДАРЯ */
 .custom-calendar {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Скрываем заголовки дней недели */
 .custom-calendar .react-datepicker__day-names {
   display: none !important;
 }
 
-/* Стили для дней */
 .custom-calendar .react-datepicker__day {
   width: 36px;
   height: 36px;
@@ -155,44 +191,37 @@
   color: #333;
 }
 
-/* Жирный шрифт для воскресенья */
 .custom-calendar .react-datepicker__day--weekend-0 {
   font-weight: bold !important;
   color: #000 !important;
 }
 
-/* Стили для выбранного дня */
 .custom-calendar .react-datepicker__day--selected {
   background-color: #ffa800;
   color: white;
   font-weight: bold;
 }
 
-/* Стили для текущего дня */
 .custom-calendar .react-datepicker__day--today {
   background-color: #f0f0f0;
   font-weight: normal;
 }
 
-/* Стили для ховера */
 .custom-calendar .react-datepicker__day:hover {
   background-color: #ffa8004f;
   border: solid 1px #ffa800;
 }
 
-/* Стили для дней из других месяцев */
 .custom-calendar .react-datepicker__day--outside-month {
   color: #ccc;
 }
 
-/* Стили для заголовка календаря */
 .custom-calendar .react-datepicker__current-month {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Стили для навигации */
 .custom-calendar .react-datepicker__navigation {
   top: 10px;
 }
@@ -242,7 +271,6 @@
     width: 100%;
   }
 
-  /* Адаптивные стили для календаря на мобильных */
   .custom-calendar {
     font-size: 12px;
   }

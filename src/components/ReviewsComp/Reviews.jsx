@@ -47,7 +47,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="reviews-section">
+    <section className="reviews-section" id="отзывы">
       <div className="reviews-container">
         <h2 className="reviews-title">ОТЗЫВЫ</h2>
 

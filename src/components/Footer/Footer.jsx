@@ -1,7 +1,5 @@
-import React from "react";
 import "./Footer.css";
 
-// Импортируем иконки (замените на ваши)
 import phoneIcon from "../../assets/images/phone.png";
 import emailIcon from "../../assets/images/mail.png";
 import skypeIcon from "../../assets/images/skype.png";
@@ -20,9 +18,8 @@ import footerArrow from "../../assets/images/footArrow.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="контакты">
       <div className="footer-container">
-        {/* Первая колонка - Контакты с иконками */}
         <div className="footer-column">
           <h3 className="footer-title">Свяжитесь с нами</h3>
           <div className="contact-info">
@@ -51,7 +48,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Третья колонка - Подписка */}
         <div className="footer-column">
           <h3 className="footer-title">Подписка</h3>
           <p className="subscription-text">Будьте в курсе событий</p>
@@ -112,7 +108,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Нижняя часть футера */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <div className="logo">Лого</div>

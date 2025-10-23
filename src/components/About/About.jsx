@@ -1,16 +1,14 @@
-import React from "react";
 import "./About.css";
 
 const About = () => {
   return (
-    <section className="about-section">
-      {/* Оранжевая полоска сверху */}
+    <section className="about-section" id="о-нас">
       <div className="about-orange-line"></div>
 
       <div className="about-container">
         <h2 className="about-title">О НАС</h2>
         <div className="about-content">
-          {/* Вертикальная полоса слева от текста */}
+
           <div className="about-vertical-line"></div>
 
           <div className="about-text">
@@ -27,7 +25,6 @@ const About = () => {
               Мы расскажем о преимуществах заказа через интернет.
             </p>
 
-            {/* Последний абзац жирный */}
             <p className="about-bold">
               Покупать жд билеты дешево можно за 90 суток до отправления поезда.
               <br />

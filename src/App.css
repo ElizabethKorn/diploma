@@ -17,6 +17,10 @@ body {
   padding: 0 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .App {

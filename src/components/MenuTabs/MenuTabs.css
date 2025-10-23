@@ -1,0 +1,136 @@
+.menu-tabs {
+  display: flex;
+  background: rgba(62, 60, 65, 1);
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  align-items: center;
+  overflow: hidden;
+  height: 70px;
+}
+
+.menu-tab {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 70px;
+}
+
+.menu-tab:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid rgba(62, 60, 65, 1);
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  z-index: 2;
+}
+
+.menu-tab:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: -21px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-left: 21px solid #ffffff;
+  border-top: 36px solid transparent;
+  border-bottom: 36px solid transparent;
+  z-index: 1;
+}
+
+.tab-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu-tab.active,
+.menu-tab.completed {
+  background: #ffa800;
+  font-weight: bold;
+}
+
+.menu-tab.active::after,
+.menu-tab.completed::after {
+  border-left-color: #ffa800;
+}
+
+.menu-tab.active::before,
+.menu-tab.completed::before,
+.menu-tab.inactive::before {
+  border-left-color: #ffffff;
+}
+
+.menu-tab.inactive {
+  background: transparent;
+  color: #ffffff;
+}
+
+.menu-tab.inactive .tab-number {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.menu-tab.inactive::after {
+  border-left-color: rgba(62, 60, 65, 1);
+}
+
+.menu-tab:hover {
+  cursor: default;
+}
+
+.menu-tab:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .menu-tabs {
+    flex-direction: column;
+    height: auto;
+    background: transparent;
+  }
+
+  .menu-tab {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 20px 16px;
+    height: 60px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: rgba(62, 60, 65, 1);
+  }
+
+  .menu-tab::after,
+  .menu-tab::before {
+    display: none;
+  }
+
+  .menu-tab.active,
+  .menu-tab.completed {
+    background: #ffa800;
+  }
+}
