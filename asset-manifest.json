@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/travel-website/static/css/main.afc6ea4f.css",
-    "main.js": "/travel-website/static/js/main.42823c65.js",
-    "static/media/Mask Group.png": "/travel-website/static/media/Mask Group.3543ff32829b343c655b.png",
-    "static/media/HowItWorks.png": "/travel-website/static/media/HowItWorks.f8f7e3f101151b115e87.png",
-    "static/media/tickets-bg.png": "/travel-website/static/media/tickets-bg.f64f9bd03781a5772e30.png",
-    "static/media/rev2.png": "/travel-website/static/media/rev2.43beec124426b57921aa.png",
-    "static/media/rev1.png": "/travel-website/static/media/rev1.6ecbaf985cf493c16049.png",
-    "index.html": "/travel-website/index.html",
-    "main.afc6ea4f.css.map": "/travel-website/static/css/main.afc6ea4f.css.map",
-    "main.42823c65.js.map": "/travel-website/static/js/main.42823c65.js.map"
+    "main.css": "/diploma/static/css/main.41f32a00.css",
+    "main.js": "/diploma/static/js/main.127a89d3.js",
+    "static/media/Mask Group.png": "/diploma/static/media/Mask Group.3543ff32829b343c655b.png",
+    "static/media/HowItWorks.png": "/diploma/static/media/HowItWorks.f8f7e3f101151b115e87.png",
+    "static/media/tickets-bg.png": "/diploma/static/media/tickets-bg.f64f9bd03781a5772e30.png",
+    "static/media/rev2.png": "/diploma/static/media/rev2.43beec124426b57921aa.png",
+    "static/media/rev1.png": "/diploma/static/media/rev1.6ecbaf985cf493c16049.png",
+    "index.html": "/diploma/index.html",
+    "main.41f32a00.css.map": "/diploma/static/css/main.41f32a00.css.map",
+    "main.127a89d3.js.map": "/diploma/static/js/main.127a89d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.afc6ea4f.css",
-    "static/js/main.42823c65.js"
+    "static/css/main.41f32a00.css",
+    "static/js/main.127a89d3.js"
   ]
 }
