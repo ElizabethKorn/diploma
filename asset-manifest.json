@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/diploma/static/css/main.41f32a00.css",
-    "main.js": "/diploma/static/js/main.127a89d3.js",
+    "main.js": "/diploma/static/js/main.364791aa.js",
     "static/media/Mask Group.png": "/diploma/static/media/Mask Group.3543ff32829b343c655b.png",
     "static/media/HowItWorks.png": "/diploma/static/media/HowItWorks.f8f7e3f101151b115e87.png",
     "static/media/tickets-bg.png": "/diploma/static/media/tickets-bg.f64f9bd03781a5772e30.png",
@@ -9,10 +9,10 @@
     "static/media/rev1.png": "/diploma/static/media/rev1.6ecbaf985cf493c16049.png",
     "index.html": "/diploma/index.html",
     "main.41f32a00.css.map": "/diploma/static/css/main.41f32a00.css.map",
-    "main.127a89d3.js.map": "/diploma/static/js/main.127a89d3.js.map"
+    "main.364791aa.js.map": "/diploma/static/js/main.364791aa.js.map"
   },
   "entrypoints": [
     "static/css/main.41f32a00.css",
-    "static/js/main.127a89d3.js"
+    "static/js/main.364791aa.js"
   ]
 }
