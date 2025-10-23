@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ticketApiService, debounce } from "../services/ticketApiService";
 
@@ -21,26 +21,23 @@ export const useSearchForm = () => {
   const fromInputRef = useRef(null);
   const toInputRef = useRef(null);
 
-  const searchCities = async (query, field) => {
-    if (query.length < 2) {
-      setSuggestions((prev) => ({ ...prev, [field]: [] }));
-      return;
-    }
+  const debouncedSearch = useMemo(() => {
+    return debounce((query, field) => {
+      if (query.length < 2) {
+        setSuggestions((prev) => ({ ...prev, [field]: [] }));
+        return;
+      }
 
-    try {
-      const cities = await ticketApiService.searchCities(query);
-      setSuggestions((prev) => ({ ...prev, [field]: cities }));
-    } catch (error) {
-      setSuggestions((prev) => ({ ...prev, [field]: [] }));
-    }
-  };
-
-  const debouncedSearch = useCallback(
-    debounce((query, field) => {
-      searchCities(query, field);
-    }, 300),
-    [searchCities]
-  );
+      ticketApiService
+        .searchCities(query)
+        .then((cities) => {
+          setSuggestions((prev) => ({ ...prev, [field]: cities }));
+        })
+        .catch((error) => {
+          setSuggestions((prev) => ({ ...prev, [field]: [] }));
+        });
+    }, 300);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
