@@ -18,7 +18,7 @@ export const ticketApiService = {
         name: city.name,
       }));
     } catch (error) {
-      console.error('Error searching cities:', error);
+      //console.error('Error searching cities:', error);
       throw error;
     }
   },
@@ -27,9 +27,7 @@ export const ticketApiService = {
   async searchRoutes(params) {
     try {
       const queryString = new URLSearchParams(params).toString();
-      const response = await fetch(
-        `${API_BASE_URL}/routes?${queryString}`
-      );
+      const response = await fetch(`${API_BASE_URL}/routes?${queryString}`);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -37,10 +35,10 @@ export const ticketApiService = {
 
       return await response.json();
     } catch (error) {
-      console.error('Error searching routes:', error);
+      //console.error('Error searching routes:', error);
       throw error;
     }
-  }
+  },
 };
 
 export const debounce = (func, delay) => {

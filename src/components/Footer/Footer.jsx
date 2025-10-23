@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="social-section">
             <h3 className="social-title">Подписывайтесь на нас</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon">
+              <a href="/" className="social-icon">
                 <img
                   src={youtubeIcon}
                   alt="Social 1"
@@ -71,15 +71,15 @@ const Footer = () => {
                   className="icon-hover"
                 />
               </a>
-              <a href="#" className="social-icon">
+              <a href="/" className="social-icon">
                 <img src={inIcon} alt="Social 2" className="icon-default" />
                 <img src={inIconHover} alt="LinkedIn" className="icon-hover" />
               </a>
-              <a href="#" className="social-icon">
+              <a href="/" className="social-icon">
                 <img src={gIcon} alt="Social 3" className="icon-default" />
                 <img src={gIconHover} alt="LinkedIn" className="icon-hover" />
               </a>
-              <a href="#" className="social-icon">
+              <a href="/" className="social-icon">
                 <img
                   src={facebookIcon}
                   alt="Social 4"
@@ -91,7 +91,7 @@ const Footer = () => {
                   className="icon-hover"
                 />
               </a>
-              <a href="#" className="social-icon">
+              <a href="/" className="social-icon">
                 <img
                   src={twitterIcon}
                   alt="Social 5"

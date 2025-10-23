@@ -4,7 +4,7 @@ import { ticketApiService, debounce } from "../services/ticketApiService";
 
 export const useSearchForm = () => {
   const navigate = useNavigate();
-  
+
   const [searchData, setSearchData] = useState({
     from: "",
     to: "",
@@ -17,7 +17,7 @@ export const useSearchForm = () => {
     to: [],
   });
   const [focusedField, setFocusedField] = useState(null);
-  
+
   const fromInputRef = useRef(null);
   const toInputRef = useRef(null);
 
@@ -39,7 +39,7 @@ export const useSearchForm = () => {
     debounce((query, field) => {
       searchCities(query, field);
     }, 300),
-    []
+    [searchCities]
   );
 
   const handleInputChange = (e) => {
@@ -83,8 +83,8 @@ export const useSearchForm = () => {
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   const handleDepartureDateChange = (date) => {
@@ -107,16 +107,16 @@ export const useSearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!searchData.from || !searchData.to || !searchData.departureDate) {
       alert("Пожалуйста, заполните все обязательные поля");
       return;
     }
 
-    navigate("/tickets", { 
-      state: { 
-        searchParams: searchData 
-      } 
+    navigate("/tickets", {
+      state: {
+        searchParams: searchData,
+      },
     });
   };
 
