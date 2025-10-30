@@ -1,5 +1,76 @@
 .tickets-page {
-  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickets-content {
+  flex: 1;
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 20px;
+}
+
+/* Основная структура */
+.tickets-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Левая колонка*/
+.left {
+  flex: 0 0 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Стили для сайдбара фильтров */
+.filter-sidebar {
+  background-color: #3e3c41;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Правая колонка - билеты*/
+.tickets-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loading-state,
+.error-state,
+.no-results {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .tickets-layout {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    flex: none;
+    width: 100%;
+  }
 }

@@ -1,0 +1,408 @@
+.filters-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px;
+}
+
+.section-divider {
+  height: 1px;
+  background: #e0e0e0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cекция дат */
+.date-side-section {
+  width: 100%;
+}
+
+.date-side-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.date-picker-input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #2c3e50;
+  background: white;
+  cursor: pointer;
+}
+
+.date-picker-input:focus {
+  outline: none;
+  border-color: #ffa800;
+}
+
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Стили для календаря */
+.custom-calendar {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Стили для объединенной секции опций */
+.all-options-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-toggle-item {
+  width: 100%;
+}
+
+.option-toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option-toggle-label:hover {
+  opacity: 0.8;
+}
+
+.option-toggle-input {
+  display: none;
+}
+
+.option-toggle-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.option-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.option-name {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Стили для ползунка-переключателя */
+.toggle-slider {
+  position: relative;
+  width: 60px;
+  height: 20px;
+  margin-left: 12px;
+}
+
+.toggle-slider-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.toggle-slider-thumb {
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background: #c4c4c4;
+  border-radius: 50%;
+  transition: all 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация при включении */
+.option-toggle-input:checked
+  + .option-toggle-content
+  + .toggle-slider
+  .toggle-slider-track {
+  background: #fcdc9d;
+  border-color: #ffa800;
+}
+
+.option-toggle-input:checked
+  + .option-toggle-content
+  + .toggle-slider
+  .toggle-slider-thumb {
+  left: calc(100% - 20px);
+  background: #ffa800;
+}
+
+/* ползунок стоимости */
+.price-filter-final {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.price-labels-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.price-label-from,
+.price-label-to {
+  font-weight: normal;
+}
+
+.price-slider-final-container {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.price-slider-track-final {
+  position: absolute;
+  height: 15px;
+  background: #3e3c41;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 100%;
+}
+
+.price-slider-fill-final {
+  position: absolute;
+  height: 15px;
+  background: #ffa800;
+  border-radius: 10px;
+  transition: all 0.1s;
+}
+
+.price-slider-min,
+.price-slider-max {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.price-slider-min::-webkit-slider-thumb,
+.price-slider-max::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #ffa800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+  pointer-events: auto;
+}
+
+.price-slider-min::-webkit-slider-thumb:hover,
+.price-slider-max::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #ffa800;
+  border-color: #ffffff;
+}
+
+.price-slider-min::-moz-range-thumb,
+.price-slider-max::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #ffa800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+  pointer-events: auto;
+}
+
+.price-slider-min::-moz-range-thumb:hover,
+.price-slider-max::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  background: #ffa800;
+  border-color: #ffffff;
+}
+
+.price-values-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #e5e5e5;
+  margin-top: 8px;
+}
+
+.price-min-final,
+.price-current-final,
+.price-max-final {
+  color: #e5e5e5;
+}
+
+/* Стили для секций времени в фильтрах */
+.filter-time-section {
+  margin-bottom: 16px;
+}
+
+.filter-time-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: 1;
+}
+
+.filter-time-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.filter-time-title {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.filter-time-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.filter-time-header:hover {
+  opacity: 0.8;
+}
+
+.filter-time-arrow {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.filter-time-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.filter-time-header:hover {
+  opacity: 0.8;
+}
+
+.filter-time-title {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  order: 1;
+}
+
+.filter-time-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s;
+  order: 2;
+}
+
+.filter-time-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* Стили для ползунков времени в фильтрах */
+.filter-time-sliders {
+  margin-top: 12px;
+  background: #3e3c41;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.time-section-divider {
+  height: 1px;
+  background: #e0e0e0;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 0;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+  .filter-section {
+    padding: 20px 16px;
+  }
+
+  .filter-title {
+    font-size: 20px;
+  }
+
+  .option-name {
+    font-size: 14px;
+  }
+
+  .toggle-slider {
+    width: 45px;
+    height: 22px;
+  }
+
+  .toggle-slider-thumb {
+    width: 18px;
+    height: 18px;
+  }
+}

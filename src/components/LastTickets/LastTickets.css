@@ -1,0 +1,126 @@
+.last-tickets-container {
+  margin-bottom: 24px;
+}
+
+.last-tickets-heading {
+  font-size: 23px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 20px 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.last-tickets-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.last-ticket-item {
+  background: white;
+  border: 1px solid #c4c4c4;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.last-ticket-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.last-ticket-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.last-ticket-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.last-ticket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.last-ticket-section:first-child {
+  text-align: left;
+}
+
+.last-ticket-section:last-child {
+  text-align: right;
+}
+
+.last-ticket-city {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.2;
+}
+
+.last-ticket-station {
+  font-size: 14px;
+  color: #928f94;
+  line-height: 1.2;
+}
+
+.last-ticket-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.last-ticket-image {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.last-ticket-image img {
+  width: auto;
+  height: 30%;
+  object-fit: cover;
+}
+
+.last-ticket-price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.last-ticket-price-prefix {
+  font-size: 14px;
+  color: #928f94;
+  margin-right: 4px;
+}
+
+.last-ticket-price-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffa800;
+}
+
+.last-ticket-price-currency {
+  font-size: 20px;
+  color: #928f94;
+  margin-left: 2px;
+}
+
+.last-tickets-loading,
+.last-tickets-empty {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+

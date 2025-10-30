@@ -1,0 +1,139 @@
+.sort-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.sort-panel-left {
+  display: flex;
+  align-items: center;
+}
+
+.results-count {
+  font-size: 15px;
+  color: #928f94;
+}
+
+.sort-panel-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Стили для выпадающего списка сортировки */
+.sort-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-dropdown span {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.sort-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 100px;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+}
+
+.sort-dropdown-toggle:hover {
+  border-color: #ffa800;
+  color: #ffa800;
+}
+
+.sort-dropdown-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0%;
+  background: #f7f5f9;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  display: block;
+  width: 50%;
+  padding: 5px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+  color: #ffa800;
+}
+
+.dropdown-item.active {
+  color: #ffa800;
+  font-weight: 600;
+}
+
+/* Стили для выбора количества элементов */
+.page-size-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-size-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.page-size-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.page-size-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 4px 8px;
+}
+
+.page-size-btn:hover {
+  color: #ffa800;
+}
+
+.page-size-btn.active {
+  color: #ffa800;
+  font-weight: 600;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .sort-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-panel-right {
+    justify-content: space-between;
+  }
+}
