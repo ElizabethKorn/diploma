@@ -57,10 +57,8 @@ export const ticketApiService = {
       }
 
       const data = await response.json();
-      console.log("Raw last tickets data:", data); // Для отладки
 
       return data.map((ticket) => {
-        // Правильная структура данных из API
         return {
           id: ticket.departure?._id || ticket._id,
           from: {

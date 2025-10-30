@@ -63,9 +63,7 @@ const FiltersSidebar = ({
   });
 
   // Синхронизация с внешними фильтрами
-  // Синхронизация с внешними фильтрами
   useEffect(() => {
-    // Убедитесь что значения действительно изменились
     if (filters.priceRange[0] !== selectedMinPrice) {
       setSelectedMinPrice(filters.priceRange[0]);
     }
@@ -73,7 +71,6 @@ const FiltersSidebar = ({
       setSelectedCurrentPrice(filters.priceRange[1]);
     }
 
-    // Для массивов и объектов используем глубокое сравнение
     if (
       JSON.stringify(filters.coachTypes) !== JSON.stringify(selectedCoachTypes)
     ) {
@@ -96,7 +93,7 @@ const FiltersSidebar = ({
     ) {
       setTimeRanges(filters.timeRanges);
     }
-  }, [filters]); // Убрали selectedMinPrice, selectedCurrentPrice из зависимостей
+  }, [filters]);
 
   //даты из searchParams
   useEffect(() => {
